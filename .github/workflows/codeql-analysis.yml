@@ -78,10 +78,10 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
       
-    - name: Download CodeQL Analysis
-      uses: actions/upload-artifact@v3
+    - name: Save CodeQL report
+      uses: actions/upload-artifact@v2
       with:
-        name: my-artifact
-        path: .
+        name: codeql-report
+        path: codeql/report
       
     
